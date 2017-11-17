@@ -1,0 +1,14 @@
+<form action="/signup/" method="post">
+    <!--you don't have to worry about someone riding on your opened sessions 
+    and making commands on your behalf from another site you opened-->
+    {% csrf_token %}
+    
+    <!--receives the form variable you passed in from views.py -->
+    <!--and depending on the variable either opens up a blank SignupForm or renders the result page-->
+    <h1>Please Signup</h1>
+    <br/>
+    
+    {{ form }}
+    <input type="submit" value="Submit"/>
+    
+</form>
